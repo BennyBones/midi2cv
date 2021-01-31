@@ -2,9 +2,9 @@
 
 <img src="/images/03.jpg" alt="midi2cv" width="400"> <img src="/images/04.jpg" alt="midi2cv" width="400">
 
-This is an modified version of Elkayem's midi2cv design. I have changed it from using banana jacks to 1/8" mono jacks and converted it to a pcb design better suited to eurorack format.
+This is an modified version of Elkayem's midi2cv design. I have changed it from using banana jacks to 1/8" mono jacks and converted it to a pcb design better suited to eurorack format. A massive Thankyou to Elkayem for putting this code and project out there.
 
-This repository contains the code and schematic for a DIY MIDI to CV converter.  I installed this converter into a home-built analog synthesizer, allowing me to play the synthesizer with my Yamaha CP50 keyboard over MIDI.
+This repository contains the code and schematic for a DIY MIDI to CV converter.  I installed this converter into a home-built analog synthesizer, allowing me to play the synthesizer over MIDI.
 
 The MIDI to CV converter includes the following outputs:
 
@@ -39,9 +39,9 @@ The Arduino code uses the standard MIDI and SPI libraries, which can be found in
 The schematic is illustrated at the bottom of this page (Eagle file included).  Input power (VIN) is 9-12V.  This is required for the Note CV op amp, used for the 0-7.3V note output.  1% metal film resistors are recommended for the 10K resistors, for a constant op-amp gain that does not change with temperature. The 10k trim pot needs to be tuned to 7.7K between the center and inter leg.
 
 The note priority options and jumper configuration are as follows:
-* **Highest Note:** When multiple notes are sounded simultaneously, the highest note being held will be sounded.  When the highest note is released, the next highest note will be played, and so on.  Remove the NP_SEL jumper to select this configuration.
-* **Lowest Note:** Analagous to highest note, except the lowest note being held will be sounded. Connect the NP_SEL jumper to the A0 pin and center pin (ground) to select this configuration. 
-* **Last Note:** The most recent note played will be sounded.  When that note is released, the next most recent note still being held will be sounded.  Connect the NP_SEL jumper to the A2 pin and center pin (ground) to select this configuration.  The illustration below shows the jumper configuration for the Last Note setting.
+* **Highest Note (+):** When multiple notes are sounded simultaneously, the highest note being held will be sounded.  When the highest note is released, the next highest note will be played, and so on.
+* **Lowest Note (-):** Analagous to highest note, except the lowest note being held will be sounded. 
+* **Last Note (L):** The most recent note played will be sounded.  When that note is released, the next most recent note still being held will be sounded.
 
 <img src="/images/schematic.JPG" alt="schematic" width="800">
 I used Elkayem's schematic to build my first iteration on proto board, as he had. I 3-d printed a face panel and it worked pretty well.
@@ -54,5 +54,9 @@ I had a few problems with bad wires and cruddy solder joints, as well as a bad a
 
 <img src="/images/08pcb.jpg" alt="pcb">
 
+I have added to this repository the gerber files for the PCBs so anyone can print them if they want them. I will also attach 3d model I did for my first design if anyone whats to use that also, note that the PCB and 3d printed face don't fit together.
 
-
+Updates I have done to this PCB: 
+* Fixed some alignment issues with the first version. 
+* Made the MIDI jack hole the right size.
+* Fixed the wiring for the LED.

@@ -1,6 +1,6 @@
 # midi2cv v2 (modified from Elkayem's midi2cv design)
 
-<img src="/images/03.JPG" alt="midi2cv" width="400"> <img src="/images/04.JPG" alt="midi2cv" width="400">
+<img src="/images/03.jpg" alt="midi2cv" width="400"> <img src="/images/04.jpg" alt="midi2cv" width="400">
 
 This is an modified version of Elkayem's midi2cv design. I have changed it from using banana jacks to 1/8" mono jacks and converted it to a pcb design better suited to eurorack format.
 
@@ -48,11 +48,11 @@ I used Elkayem's schematic to build my first iteration on proto board, as he had
 
 I had a few problems with bad wires and cruddy solder joints, as well as a bad arduino which led me to converting the design to a pcb with a few changes. I removed the 7.7k (3k and 4.7K combined) resistors and replaced them with a 10k trim pot allowing some fine tuning if required. I also added an LED to the input to indicate whether the module was recieving signal or not.
 
-<img src="/images/01.JPG" alt="midi2cv" width="400"> <img src="/images/02.JPG" alt="midi2cv" width="400">
+<img src="/images/01.jpg" alt="midi2cv" width="400"> <img src="/images/02.jpg" alt="midi2cv" width="400">
 
-<img src="/images/05.JPG" alt="midi2cv" width="400"> <img src="/images/06.JPG" alt="midi2cv" width="400">
+<img src="/images/05.jpg" alt="midi2cv" width="400"> <img src="/images/06.jpg" alt="midi2cv" width="400">
 
-<img src="/images/08pcb.JPG" alt="pcb">
+<img src="/images/08pcb.jpg" alt="pcb">
 
 
 
